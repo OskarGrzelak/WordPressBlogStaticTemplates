@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 8rem calc(100vh - 8rem);
+}
+
+.navbar {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+    z-index: 1;
+
+    padding: 0 5rem;
+    border-bottom: 1px solid rgba(255,255,255, .2);
+
+    display: flex;
+    align-items: center;
+}
+
+.navbar__list {
+    list-style: none;
+}
+
+.navbar__item {
+    display: inline-block;
+}
+
+.navbar__item:not(:last-child) {
+    margin-right: 3rem;
+}
+
+.navbar__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.logo {
+    margin-right: auto;
+    height: 16rem;
+}
+
+.header {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+
+    padding: 0 5rem;
+
+    background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5)), url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.header__title {
+    color: white;
+    font-size: 4.5rem;
+    font-weight: 400;
+}
+
+.header__excerpt {
+    padding: 3rem;
+    background-color: rgba(255,255,255, .2);
+    border-radius: 5px;
+    margin: 4rem 0 2rem;
+    width: 40%;
+}
+
+.header__excerpt h3,
+.header__excerpt h4,
+.header__excerpt p,
+.header__excerpt a {
+    color: white;
+}
+
+.header__excerpt h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.header__excerpt h4 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.header__excerpt p {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.header__excerpt a {
+    font-size: 1.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header__btn {
+    align-self: center;
+    color: white;
+    font-size: 6rem;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+/*
+    BLOG EXCERPTS
+*/
+
+.blog-excerpts {
+    padding: 10rem 0;
+    grid-column: 3 / span 8;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 5rem;
+}
+
+.blog-excerpt {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-excerpt--big {
+    grid-column: 1 / -1;
+}
+
+.blog-excerpt--small-1 {
+    grid-column: 1 / 2;
+}
+
+.blog-excerpt--small-2 {
+    grid-column: 2 / -1;
+}
+
+.blog-excerpt__header {
+    height: 40rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-excerpt__header img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s;
+    
+}
+
+.blog-excerpt__header:hover img {
+    transform: scale(1.02);
+}
+
+.blog-excerpt__header figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5rem 3rem;
+    background-color: rgba(0,0,0, .6);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-excerpt__header figcaption h2 {
+    color: white;
+    font-size: 3.2rem;
+    font-weight: 400;
+}
+
+.blog-excerpt__header figcaption h2 a:link,
+.blog-excerpt__header figcaption h2 a:visited {
+    text-decoration: none;
+    color: white;
+    transition: color .3s;
+}
+
+.blog-excerpt__header figcaption h2 a:hover {
+    color: #aaa;
+}
+
+.blog-excerpt__body {
+    padding: 4rem 2rem;
+}
+
+.blog-excerpt__body p {
+    font-size: 2rem;
+}
+
+.blog-excerpt__footer {
+    padding-top: 1rem;
+    margin: 0 2rem;
+    border-top: 1px solid rgba(0,0,0, .6);
+}
+
+.blog-excerpt__footer ul {
+    list-style: none;
+}
+
+.blog-excerpt__footer li {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.blog-excerpt__footer li:not(:last-child) {
+    margin-right: .5rem;
+}
+
+.btn {
+    background-color: #333;
+    border: none;
+    padding: 2rem;
+    text-transform: uppercase;
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn--big {
+    grid-column: 1 / -1;
+    margin: 3rem 10rem 0;
+}
