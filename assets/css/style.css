@@ -19,7 +19,7 @@ p {
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 8rem calc(100vh - 8rem);
+    grid-template-rows: 8rem calc(100vh - 8rem) /* auto 50vh */;
 }
 
 .navbar {
@@ -166,8 +166,8 @@ p {
     width: 100%;
     object-fit: cover;
     display: block;
-    transition: transform .6s;
-    
+    transition: transform .5s;
+    backface-visibility: hidden;
 }
 
 .blog-excerpt__header:hover img {
@@ -246,4 +246,68 @@ p {
 .btn--big {
     grid-column: 1 / -1;
     margin: 3rem 10rem 0;
+}
+
+.about {
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+
+    /* padding: 10rem 0; */
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+}
+
+.about__image {
+    grid-column: 1 / 7;
+    overflow: hidden;
+}
+
+.about__image img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    filter: contrast(140%);
+    transition: all 60s;
+    backface-visibility: hidden;
+}
+
+.about__image img:hover {
+    transform: scale(1.2);
+}
+
+.about__bio {
+    grid-column: 7 / -1;
+    color: white;
+    padding: 10rem;
+    align-self: center;
+    background-color: #333;
+}
+
+.about__bio h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.about__bio p {
+    font-size: 2rem;
+}
+
+.about__bio p:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.about__bio a {
+    padding: 2rem;
+    text-transform: uppercase;
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-align: center;
+    background-color: #aaa;
+    display: block;
+    margin-top: 4rem;
 }
