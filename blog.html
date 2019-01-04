@@ -10,8 +10,8 @@
 
     <title>Nieprzemilczane &mdash; historie z życia wzięte</title>
 </head>
-<body class="container container--main">
-    <nav class="navbar navbar--main">
+<body class="container">
+    <nav class="navbar">
         <img src="assets/img/logo.png" alt="nieprzemilczane" class="logo">
         <ul class="navbar__list">
             <li class="navbar__item"><a href="" class="navbar__link">Główna</a></li>
@@ -19,18 +19,8 @@
             <li class="navbar__item"><a href="" class="navbar__link">Kontakt</a></li>
         </ul>
     </nav>
-    <header class="header">
-        <h1 class="header__title">Nieprzemilczane <small>&mdash; historie z życia wzięte</small></h1>
-        <div class="header__excerpt">
-            <h3>Ostatnia historia:</h3>
-            <h4><span>10/12/2018</span> Witaj świecie</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus animi cum dicta aliquam omnis! Autem voluptatem nam culpa ab, enim a animi iusto ipsam ipsum sunt repudiandae assumenda voluptate sapiente.</p>
-            <a href="#">Czytaj &raquo;</a>
-        </div>
-        <span class="header__btn">&bigtriangledown;</span>
-    </header>
-    
-    <section class="blog-excerpts">
+
+    <main class="blog">
 
         <div class="post post--big">
             <figure class="post__header">
@@ -54,7 +44,7 @@
             </div>
         </div>
 
-        <div class="post post--small-1">
+        <div class="post post--big">
             <figure class="post__header">
                 <img src="assets/img/pipe.jpg" alt="Pipe">
                 <figcaption>
@@ -76,7 +66,7 @@
             </div>
         </div>
 
-        <div class="post post--small-2">
+        <div class="post post--big">
             <figure class="post__header">
                 <img src="assets/img/oreo.jpg" alt="Oreo">
                 <figcaption>
@@ -98,24 +88,44 @@
             </div>
         </div>
 
-        <a href="./blog.html" class="btn btn--big">Zobacz wszystkie wpisy</a>
+    </main>
 
-    </section>
-    <section class="about">
-        <div class="about__image">
-            <img src="assets/img/author.JPG" alt="Autor">
-        </div>
-        <div class="about__bio">
-            <h2>Cześć! <small>Oto cały ja</small></h2>
+    <aside class="sidebar">
+        <div class="widget">
+            <h4>O mnie</h4>
+            <img src="assets/img/img-1.jpg" alt="Autor">
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad laborum exercitationem facere deserunt dolorum dolores, sint doloremque maxime laboriosam ipsa fugiat modi nesciunt quidem voluptatibus illo rem laudantium excepturi hic.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptates aliquid, corrupti impedit placeat similique iure, ratione, iusto ducimus maxime rem. Veniam ipsa quos labore placeat hic dolores laborum! Nemo.
             </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, in quam minus magnam nemo labore asperiores nam sint autem tempora obcaecati illo! Consequuntur repellat eveniet officiis aperiam dignissimos, inventore eos!
-            </p>
-            <a href="/contact.html">Napisz do mnie</a>
         </div>
-    </section>
+        <div class="widget">
+            <form class="search-form">
+                <input type="text" name="search" id="search" placeholder="Szukaj">
+            </form>
+        </div>
+        <div class="widget">
+            <h4>Recent Posts</h4>
+            <ul>
+                <li><a href="">Blog post #1</a></li>
+                <li><a href="">Blog post #2</a></li>
+                <li><a href="">Blog post #3</a></li>
+                <li><a href="">Blog post #4</a></li>
+                <li><a href="">Blog post #5</a></li>
+            </ul>
+        </div>
+        <div class="widget">
+            <h4>Categories</h4>
+            <ul>
+                <li><a href="">Category #1</a></li>
+                <li><a href="">Category #2</a></li>
+                <li><a href="">Category #3</a></li>
+                <li><a href="">Category #4</a></li>
+                <li><a href="">Category #5</a></li>
+                <li><a href="">Category #6</a></li>
+            </ul>
+        </div>
+    </aside>
+
     <footer class="footer">
         <p>Copyrights &copy; 2019, Oskar Grzelak</p>
     </footer>
