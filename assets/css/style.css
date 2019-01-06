@@ -417,6 +417,135 @@ a:hover {
 }
 
 /*
+    COMMENTS
+*/
+
+.comments {
+    padding-bottom: 10rem;
+    grid-column: 1 / -1;
+}
+
+.comments__container {
+    visibility: hidden;
+    opacity: 0;
+    padding: 1rem 2rem 3rem;
+    margin-top: -200vh;
+    transition: margin-top .6s, opacity .3s .6s;
+}
+
+.comments__header {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    margin: 0 2rem;
+}
+
+.comments h3 {
+    margin-right: 5rem;
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.comments label {
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.comments input[type="checkbox"] {
+    visibility: hidden;
+    display: inline-block;
+}
+
+.comments input[type="checkbox"]:checked + .comments__container {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+}
+
+.comments__list,
+.comments__children {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.comments__list {
+    margin-bottom: 5rem;
+}
+
+.comments__children {
+    margin-left: 2rem;
+}
+
+.comments__item h4 {
+    display: inline-block;
+    font-size: 2rem;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #333;
+}
+
+.comments__item p {
+    font-size: 1.7rem;
+    padding: .5rem 0;
+}
+
+.comments__form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.comments__form h3 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.comments__form p {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.comments__form div {
+    margin-bottom: 1.5rem;
+}
+
+.comments__form div label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+}
+
+.comments__form div input {
+    width: 100%;
+    height: 4rem;
+    font-size: 2rem;
+    font-family: inherit;
+    color: inherit;
+}
+
+.comments__form div textarea {
+    width: 100%;
+    font-size: 2rem;
+    font-family: inherit;
+    color: inherit;
+
+}
+
+.comments__form div button {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 2rem;
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+/*
     SIDEBAR
 */
 
